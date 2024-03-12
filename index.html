@@ -9,8 +9,8 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -18,22 +18,26 @@
 
 <body>
     <div id="app">
-        <div class="container">
-            <div class="col-6 mx-auto">
-                <h2>My title</h2>
-                <div class="card">
-                    <!--Immagine iniziale dello slider-->
-                    <img src="./assets/img/lago.jpg" alt="" class="img-card-top">
+        <div class="col-6 mx-auto">
+            <h2>My title</h2>
+            <div class="card">
+                <!--Immagine iniziale dello slider-->
+                <img v-bind:src="movies[0].img" alt="" class="img-card-top">
 
-                    <!--Immagini che sfoglierò (per ora solo una)-->
-                    <div class="thumbs">
-                        <img src="./assets/img/montagna.jpg" alt="" class="">
-                    </div>
+                <!--Immagini che sfoglierò (per ora solo una)-->
+                <div class="thumbs">
+                    <img src="./assets/img/01.jpg" alt="" class="img-card-top">
+                    <img src="./assets/img/02.jpeg" alt="" class="img-card-top">
+                    <img src="./assets/img/03.jpeg" alt="" class="img-card-top">
+                    <img src="./assets/img/04.jpg" alt="" class="img-card-top">
+                    <img src="./assets/img/05.jpeg" alt="" class="img-card-top">
 
-                    <div class=" card-body">
-                        <div class="card-title">TITOLO</div>
-                        <div class="card-text">Un po' di testo</div>
-                    </div>
+                </div>
+
+                <div class=" card-body">
+                    <div class="card-title">{{movies[0].title}}</div>
+                    <div class="card-text">{{movies[0].description}}</div>
+                    <div class="card-text">{{movies[0].length}}</div>
                 </div>
             </div>
         </div>
