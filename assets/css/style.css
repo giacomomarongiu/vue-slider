@@ -1,0 +1,11 @@
+.card {
+    >img {
+        width: 100%;
+    }
+}
+
+.thumbs {
+    >img {
+        max-width: 20%;
+        object-fit: cover;
+}}
