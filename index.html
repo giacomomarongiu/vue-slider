@@ -23,7 +23,10 @@
             <div class="card">
                 <!--Immagine iniziale dello slider-->
                 <img v-bind:src="movies[activeMovie].img" alt="" class="img-card-top">
-
+                <div class="console d-flex justify-content-between">
+                    <button class="btn btn-primary" @click="left()">Left</button>
+                    <button class="btn btn-primary" @click="right()">Right</button>
+                </div>
                 <!--Inserisco con VUE i miei film nella barra inferiore -->
                 <div class="thumbs">
                     <img v-for="thumb in movies" :src="thumb.img" alt="">
@@ -35,6 +38,7 @@
                     <div class="card-text">{{movies[activeMovie].description}}</div>
                     <div class="card-text">{{movies[activeMovie].length}}</div>
                 </div>
+
             </div>
         </div>
     </div>

@@ -5,7 +5,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-      activeMovie:0,
+      activeMovie: 0,
       movies: [{
         title: "Il Signore degli anelli",
         category: "fantasy",
@@ -41,7 +41,29 @@ createApp({
         description: "lorem ipsum lorem ipsumlorem ipsuml lor em ipsumorem ipsumlorem ipsum"
       }
       ]
-
     }
+  },
+  methods: {
+    left() {
+      //verifico se lo triggero bene
+      console.log("left"); //ok
+      //Al click voglio che il mio "indice" diminuisca
+      this.activeMovie--
+      //Gestisco il caso limite
+      if (this.activeMovie < 0) {
+        this.activeMovie = (this.movies.length-1);
+      }
+    },
+    right() {
+      //verifico se lo triggero bene
+      console.log("right"); //ok
+      //Al click voglio che il mio "indice" aumenti
+      this.activeMovie++
+      //Gestisco il caso limite
+      if (this.activeMovie == (this.movies.length)) {
+        this.activeMovie = 0;
+      }
+    }
+
   }
 }).mount('#app')

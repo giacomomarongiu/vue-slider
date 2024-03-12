@@ -22,3 +22,6 @@ il riciclo spesso va a braccetto con le funzioni! Sapendole sfruttare bene, l'es
 - Inizio a interagire con il mio file Vue, visualizzo prima un film
 - Faccio si che anche le mie thumb vengano inserite con VUE
 - Aggiungo al mio file VUE una proprietà (Istanza) che mi permetta di sapere/tracciare quale indice possiede il film in primo piano (activeMovie)
+- Implemento due bottoni che mi permettono di cambiare il valore di activeMovie
+-- Creo in Methods le funzioni left e right
+- Assegno a due bottoni le funzioni al @click
