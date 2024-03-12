@@ -19,25 +19,21 @@
 <body>
     <div id="app">
         <div class="col-6 mx-auto">
-            <h2>My title</h2>
+            <h2>{{movies[activeMovie].title}}</h2>
             <div class="card">
                 <!--Immagine iniziale dello slider-->
-                <img v-bind:src="movies[0].img" alt="" class="img-card-top">
+                <img v-bind:src="movies[activeMovie].img" alt="" class="img-card-top">
 
-                <!--Immagini che sfoglierò (per ora solo una)-->
+                <!--Inserisco con VUE i miei film nella barra inferiore -->
                 <div class="thumbs">
-                    <img src="./assets/img/01.jpg" alt="" class="img-card-top">
-                    <img src="./assets/img/02.jpeg" alt="" class="img-card-top">
-                    <img src="./assets/img/03.jpeg" alt="" class="img-card-top">
-                    <img src="./assets/img/04.jpg" alt="" class="img-card-top">
-                    <img src="./assets/img/05.jpeg" alt="" class="img-card-top">
-
+                    <img v-for="thumb in movies" :src="thumb.img" alt="">
                 </div>
 
+                <!--Inserisco con VUE una serie di info-->
                 <div class=" card-body">
-                    <div class="card-title">{{movies[0].title}}</div>
-                    <div class="card-text">{{movies[0].description}}</div>
-                    <div class="card-text">{{movies[0].length}}</div>
+                    <div class="card-title">{{movies[activeMovie].title}}</div>
+                    <div class="card-text">{{movies[activeMovie].description}}</div>
+                    <div class="card-text">{{movies[activeMovie].length}}</div>
                 </div>
             </div>
         </div>

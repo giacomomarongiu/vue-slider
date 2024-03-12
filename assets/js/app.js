@@ -5,6 +5,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+      activeMovie:0,
       movies: [{
         title: "Il Signore degli anelli",
         category: "fantasy",
@@ -36,7 +37,7 @@ createApp({
         title: "Le iene",
         category: "fatasy",
         length: 115,
-        img: "./assets/img/05.jpg",
+        img: "./assets/img/05.jpeg",
         description: "lorem ipsum lorem ipsumlorem ipsuml lor em ipsumorem ipsumlorem ipsum"
       }
       ]

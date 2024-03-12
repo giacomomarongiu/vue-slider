@@ -18,3 +18,7 @@ il riciclo spesso va a braccetto con le funzioni! Sapendole sfruttare bene, l'es
 - Creo un prima struttura (Bootstrap) sul file html
 - Creo all'interno della mia istanza VUE un array di oggetti (che saranno i miei film)
 - Fisso alcune dimensioni con un po' di stile
+- Importo le mie immagini prima su html in modo statico
+- Inizio a interagire con il mio file Vue, visualizzo prima un film
+- Faccio si che anche le mie thumb vengano inserite con VUE
+- Aggiungo al mio file VUE una proprietà (Istanza) che mi permetta di sapere/tracciare quale indice possiede il film in primo piano (activeMovie)
