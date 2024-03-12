@@ -5,6 +5,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+      myAutoPlay: true,
       activeMovie: 0,
       movies: [{
         title: "Il Signore degli anelli",
@@ -51,7 +52,7 @@ createApp({
       this.activeMovie--
       //Gestisco il caso limite
       if (this.activeMovie < 0) {
-        this.activeMovie = (this.movies.length-1);
+        this.activeMovie = (this.movies.length - 1);
       }
     },
     right() {
@@ -63,7 +64,12 @@ createApp({
       if (this.activeMovie == (this.movies.length)) {
         this.activeMovie = 0;
       }
-    }
-
+    },
+    autoRight() {
+      setInterval(() => { this.right() }, 3000)
+    },
+  },
+  created() {
+    return this.autoRight()
   }
 }).mount('#app')
