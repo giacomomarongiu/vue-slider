@@ -25,3 +25,6 @@ il riciclo spesso va a braccetto con le funzioni! Sapendole sfruttare bene, l'es
 - Implemento due bottoni che mi permettono di cambiare il valore di activeMovie
 -- Creo in Methods le funzioni left e right
 - Assegno a due bottoni le funzioni al @click
+- BONUS
+ - Faccio si che al @click di un immagine il valore di activeMovie diventi il valore dell'indice dell'immagine cliccata
+ - Per questo devo aggiungere al mio ciclo v-for anche l'indice

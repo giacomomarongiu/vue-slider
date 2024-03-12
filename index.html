@@ -29,7 +29,8 @@
                 </div>
                 <!--Inserisco con VUE i miei film nella barra inferiore -->
                 <div class="thumbs">
-                    <img v-for="thumb in movies" :src="thumb.img" alt="">
+                    <!--Quella che segue questo click non è altro che una riga di JS normalissima-->
+                    <img v-for="(thumb, index) in movies" :src="thumb.img" alt="" @click="activeMovie=index">
                 </div>
 
                 <!--Inserisco con VUE una serie di info-->
