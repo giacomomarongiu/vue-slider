@@ -18,7 +18,7 @@
 
 <body>
     <div id="app">
-        <div class="col-6 m-auto">
+        <div class="col-6 m-auto" @mouseover="autoStop()" @mouseleave="autoGo()">
             <h6>{{movies[activeMovie].title}}</h6>
             <div class="card">
                 <!--Immagine iniziale dello slider-->

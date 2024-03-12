@@ -5,6 +5,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+      clock:"",
       myAutoPlay: true,
       activeMovie: 0,
       movies: [{
@@ -66,12 +67,15 @@ createApp({
       }
     },
     //Creo una funzione che mi permetta di chiamare ogni 3 secondi la funzione right()
-    autoRight() {
-      setInterval(() => { this.right() }, 3000)
+    autoGo() {
+      clock=setInterval(this.right, 3000)
     },
+    autoStop(){
+      clearInterval(clock)
+    }
   },
-  //La inserisco qui (prima il this mi dice che l'oggetto è inesistente)
+  //La inserisco qui (prima il this mi dice che l'oggetto)
   created() {
-    return this.autoRight()
+     this.autoGo()
   }
 }).mount('#app')
