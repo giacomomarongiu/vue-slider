@@ -29,3 +29,7 @@ il riciclo spesso va a braccetto con le funzioni! Sapendole sfruttare bene, l'es
  - 1 Faccio si che al @click di un immagine il valore di activeMovie diventi il valore dell'indice dell'immagine cliccata
  - 1 Per questo devo aggiungere al mio ciclo v-for anche l'indice
  - 2 Faccio si che ogi 3 secondi si cambi l'immagine dello slider
+ - 2 Utilizzo una funzione con0 setInterval che ogni 5 secondi richiama la mifa funzione right
+ - 2 La devo inserire in Created (Prima il mio oggetto non esiste)
+ - 3 Devo trovare un evento di Vue che mi permetta di stoppare la funzione all'hover
+ - 3 Viceversa la funzione deve essere attiva sempre quando tolgo l'hover

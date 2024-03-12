@@ -65,10 +65,12 @@ createApp({
         this.activeMovie = 0;
       }
     },
+    //Creo una funzione che mi permetta di chiamare ogni 3 secondi la funzione right()
     autoRight() {
       setInterval(() => { this.right() }, 3000)
     },
   },
+  //La inserisco qui (prima il this mi dice che l'oggetto è inesistente)
   created() {
     return this.autoRight()
   }
