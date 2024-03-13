@@ -12,20 +12,21 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://kit.fontawesome.com/3a46370e2f.js" crossorigin="anonymous"></script>
 </head>
 
 <!--Lifecycle Hooks per lo slider-->
 
 <body>
     <div id="app">
-        <div class="col-6 m-auto" @mouseover="autoStop()" @mouseleave="autoGo()">
-            <h6>{{movies[activeMovie].title}}</h6>
-            <div class="card">
+        <div class="col-6 mt-3 mx-auto" @mouseover="autoStop()" @mouseleave="autoGo()">
+            <div class="card text-center">
                 <!--Immagine iniziale dello slider-->
+                <h6 class="fw-bold bg-secondary">{{movies[activeMovie].title}}</h6>
                 <img v-bind:src="movies[activeMovie].img" alt="" class="img-card-top">
                 <div class="console d-flex justify-content-between">
-                    <button class="btn btn-primary" @click="left()">Left</button>
-                    <button class="btn btn-primary" @click="right()">Right</button>
+                    <button class="left btn btn-dark" @click="left()"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="right btn btn-dark" @click="right()"><i class="fa-solid fa-arrow-right"></i></i></button>
                 </div>
                 <!--Inserisco con VUE i miei film nella barra inferiore -->
                 <div class="thumbs">
@@ -35,8 +36,8 @@
 
                 <!--Inserisco con VUE una serie di info-->
                 <div class=" card-body">
-                    <div class="card-title">{{movies[activeMovie].title}}</div>
-                    <div class="card-text">{{movies[activeMovie].description}}</div>
+                    <div class="card-title fw-bold">{{movies[activeMovie].title}}</div>
+                    <div class="card-text text-white bg-secondary">{{movies[activeMovie].description}}</div>
                     <div class="card-text">{{movies[activeMovie].length}}</div>
                 </div>
 

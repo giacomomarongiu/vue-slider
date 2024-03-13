@@ -1,12 +1,17 @@
+body{
+    background-color: rgba(0, 0, 0, 0.312);
+}
+
+/*Dimensione card*/
 .card {
     max-width: 250px;
-
     >img {
         width: 100%;
         height: 350px;
     }
 }
 
+/*Ordino le immagini piccole, uso flex per affiancarle*/
 .thumbs {
     max-height: 130px;
     display: flex;
@@ -15,5 +20,20 @@
         max-width: 20%;
         max-height: 100%;
         object-fit: cover;
+    }
+}
+
+/*Posiziono i bottoni*/
+.console{
+    position: relative;
+
+    & .right{
+        position: absolute;
+        right: 0%;
+        bottom:-100%
+    }
+    & .left{
+        position: absolute;
+        bottom:-100%
     }
 }

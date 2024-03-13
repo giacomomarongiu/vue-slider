@@ -5,7 +5,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-      clock:"",
+      clock: "",
       myAutoPlay: true,
       activeMovie: 0,
       movies: [{
@@ -46,6 +46,7 @@ createApp({
     }
   },
   methods: {
+    //Funzione per incrementare
     left() {
       //verifico se lo triggero bene
       console.log("left"); //ok
@@ -56,6 +57,8 @@ createApp({
         this.activeMovie = (this.movies.length - 1);
       }
     },
+
+    //Funzione per decrementare
     right() {
       //verifico se lo triggero bene
       console.log("right"); //ok
@@ -64,18 +67,22 @@ createApp({
       //Gestisco il caso limite
       if (this.activeMovie == (this.movies.length)) {
         this.activeMovie = 0;
+        console.log(this.activeMovie, this.movies.length);
       }
     },
+
     //Creo una funzione che mi permetta di chiamare ogni 3 secondi la funzione right()
     autoGo() {
-      clock=setInterval(this.right, 3000)
+      this.clock = setInterval(this.right, 3000)
     },
-    autoStop(){
-      clearInterval(clock)
+
+    //Creo una funzione che fermi la mia timing function
+    autoStop() {
+      clearInterval(this.clock)
     }
   },
-  //La inserisco qui (prima il this mi dice che l'oggetto)
+  //La inserisco qui (prima il this mi dice che l'oggetto non esiste)
   created() {
-     this.autoGo()
+    this.autoGo()
   }
 }).mount('#app')
